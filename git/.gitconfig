@@ -1,0 +1,23 @@
+[user]
+	name = John Söderholm
+	email = soederholm.john@gmail.com
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore-glob
+
+[init]
+	defaultBranch = main
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	glum = push --set-upstream origin
+	last = log -1 HEAD
+	sw = switch
+	logo = log --oneline
+	brs = br --sort=-committerdate
+	cb = branch --show-current
