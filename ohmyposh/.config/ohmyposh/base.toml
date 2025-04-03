@@ -13,18 +13,18 @@ newline = true
 	type = "path"
 	style = "plain"
 	background = "transparent"
-	foreground = "blue"
+	foreground = "p:mint"
 	template = "{{ .Path }}"
-	
+
 		[blocks.segments.properties]
 		style = "full"
-	
+
 	[[blocks.segments]]
 	type = "git"
 	style = "plain"
 	background = "transparent"
 	foreground = "p:grey"
-	template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}'		
+	template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}'
 		[blocks.segments.properties]
 		branch_icon = ""
 		commit_icon = "@"
@@ -43,12 +43,12 @@ overflow = "hidden"
 
 		[blocks.segments.properties]
 		threshold = 5000
-		
+
 [[blocks]]
 type = "prompt"
 alignment = "left"
 newline = true
-	
+
 	[[blocks.segments]]
 	type = "text"
 	style = "plain"
@@ -72,5 +72,6 @@ background = "transparent"
 foreground = "magenta"
 template = "❯❯ "
 
-[pallete]
+[palette]
 grey = "#6c6c6c"
+mint = "#99ffe4"

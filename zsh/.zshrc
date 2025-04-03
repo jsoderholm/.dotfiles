@@ -42,6 +42,7 @@ bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 
 # Aliases
+alias vim="nvim"
 alias ls="ls --color"
 alias c="clear"
 alias o="open ."
@@ -53,6 +54,7 @@ alias l="ls"
 # Shell integrations
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
 
 # History
 HISTSIZE=5000

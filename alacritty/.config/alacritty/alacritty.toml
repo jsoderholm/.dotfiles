@@ -1,0 +1,108 @@
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[colors.indexed_colors]]
+color = "0xF8BD96"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xF5E0DC"
+index = 17
+
+[colors.bright]
+black   = '#7e7e7e'
+red     = '#ff8080'
+green   = '#99ffe4'
+yellow  = '#ffc799'
+blue    = '#b9aeda'
+magenta = '#ecaad6'
+cyan    = '#f591b2'
+white   = '#ffffff'
+
+[colors.cursor]
+cursor = "0xF5E0DC"
+text = "0x1E1D2F"
+
+[colors.normal]
+black   = '#101010'
+red     = '#f5a191'
+green   = '#90b99f'
+yellow  = '#e6b99d'
+blue    = '#aca1cf'
+magenta = '#e29eca'
+cyan    = '#ea83a5'
+white   = '#a0a0a0'
+
+[colors.primary]
+background = '#101010'
+foreground = '#ffffff'
+
+[cursor]
+blink_interval = 500
+blink_timeout = 5
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16
+
+[font.bold]
+family = "FiraMono Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "FiraMono Nerd Font"
+
+[font.normal]
+family = "FiraMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[terminal.shell]
+program = "/bin/zsh"
+
+[window]
+decorations = "Buttonless"
+dynamic_title = true
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 160
+lines = 80
+
+[window.padding]
+x = 4
+y = 4
+
+[general]
+live_config_reload = true
+
+[terminal]
