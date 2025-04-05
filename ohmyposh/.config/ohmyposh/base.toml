@@ -2,7 +2,7 @@
 
 final_space = true
 version = 3
-console_title_template = "{{ .Shell }} in {{ .Folder }}"
+console_title_template = "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}"
 
 [[blocks]]
 type = "prompt"
@@ -13,7 +13,7 @@ newline = true
 	type = "path"
 	style = "plain"
 	background = "transparent"
-	foreground = "p:mint"
+	foreground = "p:blue"
 	template = "{{ .Path }}"
 
 		[blocks.segments.properties]
@@ -50,28 +50,43 @@ alignment = "left"
 newline = true
 
 	[[blocks.segments]]
+	type = "python"
+	style = "plain"
+	background = "transparent"
+	foreground = "p:lavender"
+	template = '({{ .Venv }}) '
+
+		[blocks.segments.properties]
+		display_mode = "environment"
+
+	[[blocks.segments]]
 	type = "text"
 	style = "plain"
 	background = "transparent"
 	foreground_templates = [
         	"{{if gt .Code 0}}red{{end}}",
-        	"{{if eq .Code 0}}magenta{{end}}"
+        	"{{if eq .Code 0}}p:pink{{end}}"
 	]
 	template = "❯"
+
+
 
 [transient_prompt]
 background = "transparent"
 foreground_templates = [
 	"{{if gt .Code 0}}red{{end}}",
-	"{{if eq .Code 0}}magenta{{end}}"
+	"{{if eq .Code 0}}p:pink{{end}}"
 ]
 template = "❯ "
 
 [secondary_prompt]
 background = "transparent"
-foreground = "magenta"
+foreground = "p:pink"
 template = "❯❯ "
 
 [palette]
-grey = "#6c6c6c"
-mint = "#99ffe4"
+grey = "#acb0be"
+blue = "#89b4fa"
+pink = "#f5c2e7"
+lavender = "#b4befe"
+
